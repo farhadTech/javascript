@@ -56,53 +56,172 @@ let set4 = new Set();
 console.log(set4);
 */
 
-// Methods of set in JavaScript
-// set.add()
+/* Set in JavaScript */
+/*
+let set1 = new Set(["sumit", "sumit", "amit", "anil", "anish"]);
+let set2 = new Set("foooooooood");
+let set3 = new Set([10, 20, 30, 30, 40, 40]);
+let set4 = new Set();
+*/
+
+// add
+/*
 let set1 = new Set();
 set1.add(10);
 set1.add(20);
+
 set1.add(30).add(40).add(50);
 console.log(set1);
+*/
 
-let set2 = new Set("foooodiiiieee");
-console.log(set2.delete('e'));
-console.log(set2);
-console.log(set2.delete('g'));
+// delete
+/*
+let set1 = new Set("foooodiiiieeee");
+console.log(set1.delete('e'));
+console.log(set1);
+console.log(set1.delete('g'));
+*/
 
-let set3 = new Set([10, 20, 30, 40, 50]);
-console.log(set3);
-set3.clear();
-console.log(set3);
+//clear
+/*
+let set1 = new Set([10, 20, 30, 40, 50]);
+console.log(set1);
+set1.clear();
+console.log(set1);
+*/
 
-let set4 = new Set();
-set4.add(50);
-set4.add(30);
-set4.add(40);
-set4.add(20);
-set4.add(10);
+//set.entries
+/*
+let set1 = new Set();
+set1.add(50);
+set1.add(30);
+set1.add(40);
+set1.add(20);
+set1.add(10);
 
+let getEntriesArray = set1.entries();
 
-let getEntriesArray = set4.entries();
 console.log(getEntriesArray.next().value);
 console.log(getEntriesArray.next().value);
 console.log(getEntriesArray.next().value);
+*/
 
-let set5 = new Set();
-set5.add(50);
-set5.add(30);
-console.log(set5.has(50));
-console.log(set5.has(10));
+//set.has()
+/*
+let set1 = new Set();
+set1.add(50);
+set1.add(30);
+console.log(set1.has(50));
+console.log(set1.has(10));
+*/
 
-// set values and keys
-let set6 = new Set();
-set6.add(50);
-set6.add(30);
-set6.add(40);
-set6.add("Geeks");
-set6.add("GFG");
+// set.values();
+// set.keys();
+/*
+let set1 = new Set();
+set1.add(50);
+set1.add(30);
+set1.add(40);
+set1.add("Geeks");
+set1.add("GFG");
 
-let getValues = set6.values();
+let getValues = set1.values();
 console.log(getValues);
 
-let getKeys = new set6.keys();
+let getKeys = set1.keys();
 console.log(getKeys);
+*/
+
+//set.forEach();
+//Set.prototype[@@iterator]()
+/*
+let set1 = new Set(["sumit", "sumit", "amit", "anish"]);
+let getit = set1[Symbol.iterator]();
+console.log(getit.next());
+console.log(getit.next());
+console.log(getit.next());
+console.log(getit.next());
+*/
+
+/* set operations in javaScript */
+// js subSet() method
+/*
+Set.prototype.subSet = function (otherSet) {
+  if (this.size > otherSet.size) {
+    return false;
+  }
+  else {
+    for (let elem of this) {
+      if (!otherSet.has(elem))
+        return false;
+    }
+    return true;
+  }
+}
+
+let setA = new Set([10, 20, 30]);
+let setB = new Set([50, 60, 10, 20, 30, 40]);
+let setC = new Set([10, 30, 40, 50]);
+
+console.log(setA.subSet(setB));
+console.log(setA.subSet(setC));
+console.log(setC.subSet(setB));
+*/
+/*
+// javaScript union() method
+Set.prototype.union = function (otherSet) {
+  let unionSet = new Set();
+
+  for (let elem of this) {
+    unionSet.add(elem);
+  }
+
+  for (let elem of otherSet)
+    unionSet.add(elem);
+  return unionSet;
+}
+
+let set1 = new Set([10, 20, 30, 40, 50]);
+let set2 = new Set([40, 50, 60, 70, 80]);
+
+let unionSet = set1.union(set2);
+console.log(unionSet.values());
+*/
+/*
+// javaScript intersection method
+Set.prototype.intersection = function (otherSet) {
+  let intersectionSet = new Set();
+
+  for (let elem of otherSet) {
+    if (this.has(elem))
+      intersectionSet.add(elem);
+  }
+  return intersectionSet;
+}
+
+let set1 = new Set([10, 20, 30, 40, 50]);
+let set2 = new Set([40, 50, 60, 70, 80]);
+
+let intersectionSet = set1.intersection(set2);
+
+console.log(intersectionSet.values());
+*/
+/*
+// javaScript difference method
+Set.prototype.difference = function (otherSet) {
+  let differenceSet = new Set();
+
+  for (let elem of this) {
+    if (!otherSet.has(elem)) {
+      differenceSet.add(elem);
+    }
+  }
+  return differenceSet;
+}
+
+let set1 = new Set([10, 20, 30, 40, 50]);
+let set2 = new Set([40, 50, 60, 70, 80]);
+
+let differenceSet = set1.difference(set2);
+console.log(differenceSet);
+*/
