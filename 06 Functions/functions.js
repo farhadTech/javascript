@@ -165,6 +165,40 @@ console.log(factorial(5));
 const multiply = a => b => a * b;
 console.log(multiply(3)(4));
 */
-
+/*
 // 10. short-circuiting with logical operators
-const getName = name => name 
+const getName = name => name || "unknown";
+console.log(getName('Alice'));
+console.log(getName(''));
+*/
+/*
+const a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+// normal way
+const a2 = a.map(function (s) {
+  return s.length;
+});
+console.log("Normal way: ", a2);
+
+// using arrow function
+const a3 = a.map((s) => s.length);
+console.log("Using arrow function: ", a3);
+*/
+
+/********function parameters */
+/*
+function multiply(a, b) {
+  b = typeof b !== "undefined" ? b : 1;
+  return a * b;
+}
+console.log(multiply(69));
+*/
+
+/****** Calling functions */
+/*
+function welcomeMsg(name) {
+  return ("Hello " + name + " welcome to GeeksforGeeks");
+}
+
+let nameVal = "Admin";
+console.log(welcomeMsg(nameVal));
+*/
