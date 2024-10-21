@@ -35,7 +35,7 @@ let geeks = {
 let printFunc2 = geeks.printFunc.bind(geeks);
 printFunc2();
 */
-
+/*
 // example 4
 let geeks1 = {
   name: "ABC",
@@ -64,4 +64,4 @@ printFunc3();
 
 let printFunc4 = printVal.bind(geeks3);
 printFunc4();
-
+*/
