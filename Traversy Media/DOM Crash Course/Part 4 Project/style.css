@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+header .container {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  width: 540px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  width: 100%;
+  background-color: steelblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+}
+
+.search-input {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.container ul {
+  list-style: none;
+}
+
+.card {
+  background-color: skyblue;
+  padding: 40px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.card h2 {
+  color: black;
+  font-size: 32px;
+}
+
+.card .submit-input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.container .card .btn {
+  margin-left: 10px;
+  padding: 9px 12px;
+  background-color: black;
+  color: skyblue;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.list-group-item {
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  border: 1px solid steelblue;
+}
+
+.list-group-item button {
+  position: relative;
+  left: 250px;
+  margin: 10px 5px;
+}

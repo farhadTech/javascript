@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walking the DOM</title>
+  <script>
+    // alert("From HEAD: " + document.body);
+  </script>
+</head>
+<body>
+  <div>Begin</div>
+  <ul>
+    <li>
+      <b>Information</b>
+    </li>
+  </ul>
+
+
+  <table id="table">
+    <tr>
+      <td>one</td>
+      <td>two</td>
+    </tr>
+    <tr>
+      <td>three</td>
+      <td>four</td>
+    </tr>
+  </table>
+  <script>
+    let td = table.rows[0].cells[1];
+    td.style.backgroundColor = "red";
+  /***** Children, child nodes, firstChild, lastChild*/
+    // alert("From BODY: " + document.body);
+    for(let i = 0; i < document.body.childNodes.length; i++) {
+      alert(document.body.childNodes[i]);
+    }
+    // elem.childNodes[0] === elem.firstChild
+    // elem.childNodes[elem.childNodes.length - 1] === elem.lastChild
+    // elem.hasChildNodes();
+
+  /* DOM Collections */
+  // 1. We can use for..of to iterator over it.
+  for (let node of document.body.childNodes) {
+    alert(node);
+  }
+  // 2. Array methods won't work, because it's not an array.
+  alert(document.body.childNodes.filter);
+
+  /* Don't use for..in to loop over collections */
+  for(let prop in document.body.childNodes ) alert(prop);
+
+  /***** Siblings and the parent */
+  /* for instance, here <head> and <body> are siblings */
+  /*
+  * <body> is said to be the "next" or "right" sibling of <head>.
+  * <head> is said to be the "previous" or left sibling of <body>.
+  */
+
+  // parent of <body> is <html>
+  alert( document.body.parentNode === document.documentElement);
+
+
+  // after <head> goes <body>
+  alert( document.head.nextSibling);
+
+  // before <body> goes <head>
+  alert(document.body.previousSibling);
+
+
+
+  /********** Element-only navigation */
+  alert( document.documentElement.parentNode);
+  alert( document.documentElement.parentElement);
+
+  while(elem = elem.parentElement) {
+    alert ( elem );
+  }
+  for(let elem of document.body.children) {
+    alert(elem);
+  }
+
+  </script>
+
+</body>
+</html>
